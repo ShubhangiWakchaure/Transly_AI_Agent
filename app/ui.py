@@ -3,8 +3,16 @@ from app.translator import translate_text
 from app.languages import LANG_CODES
 
 SUPPORTED_LANGUAGES = ["Hindi", "Marathi", "Spanish", "English", "French"]
+# Load local logo as base64
+def get_logo_base64(path="assets/logo.png"):
+    with open(path, "rb") as f:
+        encoded = base64.b64encode(f.read()).decode()
+    return f"data:image/png;base64,{encoded}"
+
 
 def build_interface():
+    logo_src = get_logo_base64()
+    
     with gr.Blocks(css="""
         .chat-container {height: 500px; overflow-y: auto; padding: 10px; border-radius: 15px; background-color: #f5f5f5;}
         .message-user {background-color: #DCF8C6; border-radius: 12px; padding: 8px; margin: 5px; max-width: 70%; align-self: flex-end;}
@@ -15,9 +23,9 @@ def build_interface():
         .lang-dropdown {border-radius: 12px; padding: 5px;}
     """) as demo:
         
-        gr.Markdown("""
-        # <img src='assests/Transly AI Agent.png' width='40' style='vertical-align: middle;'>  Transly AI — Translator
-        """)
+        gr.Markdown(f"""
+# <img src="{logo_src}" width="40" style="vertical-align: middle;"> Transly AI — Translator
+""", elem_id="header")
         with gr.Row():
             # Left panel (Language + info)
             with gr.Column(scale=1):
