@@ -27,20 +27,17 @@ cd Transly_AI_Agent
 ```bash
 python -m venv venv
 
-```
-# Windows 
+Windows 
  venv\Scripts\activate
+Mac/Linux
 
-
-# Mac/Linux
-```bash
 source venv/bin/activate
 
 ```
 3️⃣ **Install dependencies**
 ```bash
-
 pip install -r requirements.txt
+
 
 ```
 4️⃣ **Run the app**
@@ -52,6 +49,7 @@ python -m app.main
 
 Go to: http://127.0.0.1:7860
 
+---
 
 ## 🖥 Usage
 
@@ -63,6 +61,7 @@ Go to: http://127.0.0.1:7860
 
 - The translated response will appear in the chat interface.
 
+---
 ``
 ### 🗂 Folder Structure
 
