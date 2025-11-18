@@ -86,3 +86,10 @@ Transly_AI_Agent/
 - Google Generative AI (Gemini 1.5)
 
 - dotenv (Environment variable management)
+
+---
+## Preview
+
+Here is how Transly AI Agent looks:
+
+![Transly AI Screenshot](assests/Screenshot.png)
