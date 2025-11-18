@@ -22,8 +22,8 @@
 git clone https://github.com/ShubhangiWakchaure/Transly_AI_Agent.git
 cd Transly_AI_Agent
 
----
+***
 
-2️⃣ **Create and activate a virtual environment**
-``bash
+2️⃣ Create and activate a virtual environment
+
 python -m venv venv
