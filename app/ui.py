@@ -17,7 +17,7 @@ def build_interface():
     with gr.Blocks(css="""
         /* Center container */
         .main-container {
-            max-width: 600px;  /* adjust width as needed */
+            max-width: 800px;  /* adjust width as needed */
             margin: 20px auto; /* center horizontally */
             padding: 10px;     /* inner padding */
         }
@@ -35,14 +35,14 @@ def build_interface():
         # Wrap all in a central container
         with gr.Column(elem_classes="main-container"):
 
-            # Header with logo
             gr.Markdown(f"""
-<div class="header">
-    <img src="{logo_src}" width="50" style="vertical-align: middle; margin-right:10px;">
+<div style="display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 10px;">
+    <img src="{logo_src}" width="50" height="50" style="display: inline-block;">
     <span style="font-size:30px; font-weight:bold;">Transly AI — Translator</span>
 </div>
 """)
 
+ 
             # Language selector below header
             lang_selector = gr.Dropdown(
                 SUPPORTED_LANGUAGES,
