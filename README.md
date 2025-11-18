@@ -62,9 +62,9 @@ Go to: http://127.0.0.1:7860
 - The translated response will appear in the chat interface.
 
 ---
-``
-### 🗂 Folder Structure
 
+### 🗂 Folder Structure
+```
 Transly_AI_Agent/
 │
 ├─ app/
@@ -76,10 +76,10 @@ Transly_AI_Agent/
 ├─ .env                 # API key (ignored in git)
 ├─ requirements.txt     # Python dependencies
 └─ README.md            # Project documentation 
-
+```
 ---
-``
-## ⚙️ Technologies Used
+
+### ⚙️ Technologies Used
 
 - Python 3.11+
 
