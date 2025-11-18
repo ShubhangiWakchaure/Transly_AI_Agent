@@ -1,4 +1,4 @@
-# 🌐 Transly AI — ChatGPT-Style Translator
+# 🌐 Transly AI — Language Translator
 
 **Transly AI** is a desktop/web-based AI-powered translator that allows you to convert text or voice into **5 supported languages**: Hindi, Marathi, Spanish, English, and French. The app features a modern chat interface with a typing panel, microphone input, and send button.
 
@@ -6,7 +6,6 @@
 
 ## 🛠 Features
 
-- ChatGPT-style conversational UI
 - Translate **text and voice** into multiple languages
 - Voice input via microphone
 - Language selection dropdown with icons
@@ -30,7 +29,6 @@ python -m venv venv
 Windows 
  venv\Scripts\activate
 Mac/Linux
-
 source venv/bin/activate
 
 ```
