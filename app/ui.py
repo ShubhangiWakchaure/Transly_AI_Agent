@@ -5,49 +5,53 @@ import base64
 
 SUPPORTED_LANGUAGES = ["Hindi", "Marathi", "Spanish", "English", "French"]
 
-# Load local logo as base64
-def get_logo_base64(path="assests/logo.png"):
+# Load the uploaded logo as base64
+def get_logo_base64(path="assests\logo.png"):
     with open(path, "rb") as f:
         encoded = base64.b64encode(f.read()).decode()
     return f"data:image/png;base64,{encoded}"
 
 def build_interface():
-    logo_src = get_logo_base64() 
+    logo_src = get_logo_base64()
+
     with gr.Blocks(css="""
-        .chat-container {height: 500px; overflow-y: auto; padding: 10px; border-radius: 15px; background-color: #f5f5f5;}
+        .header {text-align: center; margin-bottom: 10px;}
+        .chat-container {height: 400px; overflow-y: auto; padding: 10px; border-radius: 15px; background-color: #f5f5f5;}
         .message-user {background-color: #DCF8C6; border-radius: 12px; padding: 8px; margin: 5px; max-width: 70%; align-self: flex-end;}
         .message-bot {background-color: #ffffff; border-radius: 12px; padding: 8px; margin: 5px; max-width: 70%; align-self: flex-start;}
-        .input-panel {display: flex; gap: 10px; padding: 5px;}
+        .input-panel {display: flex; gap: 10px; padding: 5px; margin-top: 5px;}
         .send-btn {background-color: #4CAF50; color: white; border-radius: 12px; padding: 10px 15px;}
         .mic-btn {background-color: #2196F3; color: white; border-radius: 12px; padding: 10px;}
-        .lang-dropdown {border-radius: 12px; padding: 5px;}
+        .lang-dropdown {border-radius: 12px; padding: 5px; margin-bottom: 10px;}
     """) as demo:
-        
-        gr.Markdown(f"""
-# <img src="{logo_src}" width="40" style="vertical-align: middle;"> 🌐 Transly AI — Translator
-""", elem_id="header")
-        with gr.Row():
-            # Left panel (Language + info)
-            with gr.Column(scale=1):
-                lang_selector = gr.Dropdown(
-                    SUPPORTED_LANGUAGES,
-                    label="🌍 Select Language",
-                    value="English",
-                    elem_classes="lang-dropdown"
-                )
-                gr.Markdown("**Your personal AI translator.**")
 
-            # Chat column
-            with gr.Column(scale=3):
-                chatbot = gr.Chatbot(elem_classes="chat-container", height=420, type="messages")
-                
-                with gr.Row(elem_classes="input-panel"):
-                    user_input = gr.Textbox(
-                        placeholder="Type a message...",
-                        show_label=False
-                    )
-                    mic = gr.Audio(sources=["microphone"], type="filepath", label=None, elem_classes="mic-btn")
-                    send_btn = gr.Button("➤", elem_classes="send-btn")
+        # Header with logo
+        gr.Markdown(f"""
+<div class="header">
+    <img src="{logo_src}" width="50" style="vertical-align: middle; margin-right:10px;">
+    <span style="font-size:30px; font-weight:bold;">Transly AI — Translator</span>
+</div>
+""")
+
+        # Language selector below header
+        lang_selector = gr.Dropdown(
+            SUPPORTED_LANGUAGES,
+            label="🌍 Select Language",
+            value="English",
+            elem_classes="lang-dropdown"
+        )
+
+        # Chatbot area
+        chatbot = gr.Chatbot(elem_classes="chat-container", height=400, type="messages")
+
+        # Input row
+        with gr.Row(elem_classes="input-panel"):
+            user_input = gr.Textbox(
+                placeholder="Type a message...",
+                show_label=False
+            )
+            mic = gr.Audio(sources=["microphone"], type="filepath", label=None, elem_classes="mic-btn")
+            send_btn = gr.Button("➤", elem_classes="send-btn")
 
         # Backend logic
         def process_message(message, history, target_lang):
