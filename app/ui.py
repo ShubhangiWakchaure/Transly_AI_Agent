@@ -15,8 +15,9 @@ def build_interface():
         .lang-dropdown {border-radius: 12px; padding: 5px;}
     """) as demo:
         
-        gr.Markdown("# 🌐 Transly AI — Translator")
-
+        gr.Markdown("""
+        # <img src='assests/logo.png' width='40' style='vertical-align: middle;'> 🌐 Transly AI — Translator
+        """)
         with gr.Row():
             # Left panel (Language + info)
             with gr.Column(scale=1):
