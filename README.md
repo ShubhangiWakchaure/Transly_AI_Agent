@@ -1,96 +1,87 @@
-Transly AI — Language Translator
-Transly AI is a modern AI-powered translator with a ChatGPT-style interface. It allows users to translate text and speech into 5 supported languages in real-time.
+# 🌐 Transly AI — Language Translator
 
-This project combines Google Generative AI, speech-to-text, and Gradio to create an interactive and stylish translation interface.
+![Transly AI](assets/cover.png) <!-- optional banner image -->
 
-🎯 Features
+**Transly AI** is an AI powered Interface like **Gemini**. Convert text or voice into **five supported languages** with a clean, interactive chat interface.  
 
-Translate text or voice input into:
+---
 
-Hindi 🇮🇳
+## 🚀 Features
 
-Marathi 🇮🇳
+- Translate **text and speech** in real-time
+- Supported languages: **Hindi**, **Marathi**, **Spanish**, **English**, **French**
+- Modern **chat-style interface** with user and AI messages
+- **Microphone input** for voice-to-text translation
+- **Language selection dropdown** with icons
+- Responsive, minimalistic UI  
 
-Spanish 🇪🇸
+---
 
-English 🇬🇧
+## 💻 Technologies Used
 
-French 🇫🇷
+- Python 3.10+  
+- [Google Generative AI (Gemini 1.5 model)](https://developers.generativeai.google/) for translation  
+- [Gradio](https://gradio.app/) for chat interface  
+- **SpeechRecognition** and **pydub** for audio processing  
+- **dotenv** for secure API key management  
 
-Chat-style interface inspired by ChatGPT
+---
 
-Voice input support with microphone button
+## 📂 Project Structure
 
-Responsive design with typing panel at bottom
-
-Language selection dropdown with icons for clarity
-
-Lightweight and runs locally using Python & Gradio
-
-💻 Demo Preview
-
-<!-- Optional: screenshot -->
-
-🛠️ Technologies Used
-
-Python 3.10+
-
-Google Generative AI (Gemini 1.5 model)
-
-Gradio (UI & Chat Interface)
-
-SpeechRecognition & pydub (for audio to text)
-
-dotenv (for safe API key management)
-
-📁 Project Structure
 Transly_AI_Agent/
 │
 ├─ app/
-│   ├─ main.py           # Entry point of the app
-│   ├─ translator.py     # Translation logic with AI model
-│   ├─ speech_to_text.py # Voice-to-text processing
-│   ├─ ui.py             # Gradio UI components & styling
-│   └─ languages.py      # Language codes mapping
+│ ├─ main.py # Entry point of the app
+│ ├─ translator.py # AI translation logic
+│ ├─ speech_to_text.py # Audio-to-text logic
+│ ├─ ui.py # Gradio UI layout & styling
+│ └─ languages.py # Language code mapping
 │
-├─ .env                  # API keys (ignored in GitHub)
-├─ requirements.txt      # Python dependencies
-├─ README.md
-└─ assets/               # Optional images for README/UI
+├─ assets/ # Images/screenshots for README
+├─ .env # Environment variables (ignored in Git)
+├─ requirements.txt # Python dependencies
+└─ README.md
 
-⚡ Quick Start
-1. Clone the repository
-git clone https://github.com/your-username/Transly_AI_Agent.git
+---
+
+## ⚡ Quick Start
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/ShubhangiWakchaure/Transly_AI_Agent.git
 cd Transly_AI_Agent
 
-2. Create and activate a virtual environment
+---
+2️⃣ Create and activate virtual environment
+
 python -m venv venv
 # Windows
 venv\Scripts\activate
 # Mac/Linux
 source venv/bin/activate
 
-3. Install dependencies
+---
+
+3️⃣ Install dependencies
+
 pip install -r requirements.txt
 
-4. Add your .env file
+---
+
+4️⃣ Configure .env file
+
+Create a .env file in the root directory:
+
 GOOGLE_API_KEY=your_api_key_here
 
+---
 
-Important: .env is ignored in GitHub for security.
-
-5. Run the app
+5️⃣ Run the app
 python -m app.main
 
+Open in browser: http://127.0.0.1:7860
 
-Open your browser and go to: http://127.0.0.1:7860
+---
 
-🖌️ UI Design
-
-Left-hand side: Language selection dropdown with icons
-
-Main section: Chat messages with user and AI messages
-
-Bottom: Typing panel + microphone + send button
-
-Clean, minimalistic, and responsive
