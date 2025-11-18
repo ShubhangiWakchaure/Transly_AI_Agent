@@ -6,7 +6,7 @@ import base64
 SUPPORTED_LANGUAGES = ["Hindi", "Marathi", "Spanish", "English", "French"]
 
 # Load local logo as base64
-def get_logo_base64(path="assets/logo.png"):
+def get_logo_base64(path="assests/logo.png"):
     with open(path, "rb") as f:
         encoded = base64.b64encode(f.read()).decode()
     return f"data:image/png;base64,{encoded}"
