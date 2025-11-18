@@ -43,24 +43,16 @@ source venv/bin/activate
 pip install -r requirements.txt
 
 ```
-4️⃣ **Configure the .env file**
-
-Create a .env file in the root directory and add:
-```bash
-GOOGLE_API_KEY=your_api_key_here
-
-```
-5️⃣ **Run the app**
+4️⃣ **Run the app**
 ```bash
 python -m app.main
 
 ```
-6️⃣ **Open in browser**
-```bash
+5️⃣ **Open in browser**
+
 Go to: http://127.0.0.1:7860
 
----
-```
+
 ## 🖥 Usage
 
 - Type your message in the text box or use the microphone to speak.
@@ -70,20 +62,6 @@ Go to: http://127.0.0.1:7860
 - Press the Send button or hit Enter to translate.
 
 - The translated response will appear in the chat interface.
-```
----
-```
-### 🎨 Features
-
-- Translate text and voice in real-time
-
-- Supports 5 languages: Hindi, Marathi, Spanish, English, French
-
-- Microphone input for hands-free translation
-
-- Sleek, responsive UI with bottom typing panel and language selector
-
----- 
 
 ``
 ### 🗂 Folder Structure
