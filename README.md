@@ -22,8 +22,92 @@
 git clone https://github.com/ShubhangiWakchaure/Transly_AI_Agent.git
 cd Transly_AI_Agent
 
-***
-
-2️⃣ Create and activate a virtual environment
-
+```
+2️⃣ **Create and activate a virtual environment**
+```bash
 python -m venv venv
+
+```
+# Windows 
+ venv\Scripts\activate
+
+
+# Mac/Linux
+```bash
+source venv/bin/activate
+
+```
+3️⃣ **Install dependencies**
+```bash
+
+pip install -r requirements.txt
+
+```
+4️⃣ **Configure the .env file**
+
+Create a .env file in the root directory and add:
+```bash
+GOOGLE_API_KEY=your_api_key_here
+
+```
+5️⃣ **Run the app**
+```bash
+python -m app.main
+
+```
+6️⃣ **Open in browser**
+```bash
+Go to: http://127.0.0.1:7860
+
+---
+```
+## 🖥 Usage
+
+- Type your message in the text box or use the microphone to speak.
+
+- Select your target language from the dropdown.
+
+- Press the Send button or hit Enter to translate.
+
+- The translated response will appear in the chat interface.
+```
+---
+```
+### 🎨 Features
+
+- Translate text and voice in real-time
+
+- Supports 5 languages: Hindi, Marathi, Spanish, English, French
+
+- Microphone input for hands-free translation
+
+- Sleek, responsive UI with bottom typing panel and language selector
+
+---- 
+
+``
+### 🗂 Folder Structure
+
+Transly_AI_Agent/
+│
+├─ app/
+│  ├─ main.py           # Main app launcher
+│  ├─ ui.py             # Gradio UI components
+│  ├─ translator.py     # Google Gemini translation logic
+│  └─ languages.py      # Language code mapping
+│
+├─ .env                 # API key (ignored in git)
+├─ requirements.txt     # Python dependencies
+└─ README.md            # Project documentation 
+
+---
+``
+## ⚙️ Technologies Used
+
+- Python 3.11+
+
+- Gradio (UI & Chatbot)
+
+- Google Generative AI (Gemini 1.5)
+
+- dotenv (Environment variable management)
