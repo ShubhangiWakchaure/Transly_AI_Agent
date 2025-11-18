@@ -16,7 +16,7 @@ def build_interface():
     """) as demo:
         
         gr.Markdown("""
-        # <img src='assests/logo.png' width='40' style='vertical-align: middle;'> 🌐 Transly AI — Translator
+        # <img src='assests/Transly AI Agent.png' width='40' style='vertical-align: middle;'>  Transly AI — Translator
         """)
         with gr.Row():
             # Left panel (Language + info)
